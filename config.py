@@ -12,4 +12,11 @@ if not BOT_TOKEN:
 
 CURRENCY_SYMBOL = os.getenv("CURRENCY_SYMBOL", "₦")
 
-DB_PATH = os.getenv("DB_PATH", "expensemate.db")
+# FIXME: Configuring the database using supabase
+SUPABASE_DB_URL = os.getenv("SUPABASE_DB_URL")
+
+if not SUPABASE_DB_URL:
+    raise ValueError(
+        "SUPABASE_DB_URL is missing. Add it to your .env file. "
+        "Find it in your Supabase project: Settings > Database > Connection string"
+    )

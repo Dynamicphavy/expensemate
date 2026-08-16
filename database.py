@@ -2,7 +2,7 @@
 import psycopg2
 from psycopg2.extras import RealDictCursor
 from contextlib import contextmanager
-from datetime import date, datetime
+from datetime import datetime
 
 from config import SUPABASE_DB_URL
 
